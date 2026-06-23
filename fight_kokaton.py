@@ -178,7 +178,6 @@ def main():
         
         for bomb in bombs:
             if bird.rct.colliderect(bomb.rct):
-
                 bird.change_img(8,screen)
                 fonto = pg.font.Font(None,80)
                 txt = fonto.render("Game Over",True,(255,0,0))
@@ -188,6 +187,7 @@ def main():
                 return
 
         for i, bomb in enumerate(bombs):
+            
             if beam is not None:
                 if beam.rct.colliderect(bomb.rct):
                     bird.change_img(6,screen)
